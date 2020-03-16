@@ -3,7 +3,7 @@ import requests, json
 # we entered into terminal=  "pip3 instal requests"
 from config import *
 #This is getting all the files from our config file!
-BASE_URL = "https://api.alpaca.markets"
+BASE_URL = "https://paper-api.alpaca.markets"
 ACCOUNT_URL = "{}/v2/account".format(BASE_URL)
 ORDERS_URL = "{}/v2/orders".format(BASE_URL)
 HEADERS = {'APCA-API-KEY-ID': API_KEY, 'APCA-API-SECRET-KEY': SECRET_KEY}
@@ -21,4 +21,3 @@ def create_order():
     r = requests.get(ACCOUNT_URL, headers= HEADERS )
     json_format2 = json.loads(r.text)
     print(json_format2)
-    
