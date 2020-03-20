@@ -14,7 +14,6 @@ ticker = "https://api.polygon.io/v2/reference/tickers?sort=lkn&market=STOCKS&per
 r = requests.get(POLYGON_URL.format(TICKER, START_DATE, END_DATE, API_KEY ))
 json_data = json.loads(r.content)
 
-print(json_data)
 
 csv_file = open('alpaca.csv', 'w')
 csv_writer = csv.writer(csv_file)

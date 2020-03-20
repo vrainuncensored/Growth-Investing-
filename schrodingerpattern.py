@@ -1,5 +1,8 @@
 import csv
 
+def is_bullish_candlestick(candle):
+    return candle['Close'] > candle['Open']
+
 def is_bearish_candlestick(candle):
         return candle['Close'] < candle['Open']
 
