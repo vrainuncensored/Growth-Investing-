@@ -2,3 +2,6 @@ plotly
 pandas
 requests
 yfinance
+html5lib
+BeautifulSoup4
+lxml

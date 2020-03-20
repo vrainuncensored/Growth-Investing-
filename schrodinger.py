@@ -1,9 +1,9 @@
 import yfinance as yf
 import pandas
 
-dinger = yf.Ticker("SDGR")
+schrodinger = yf.Ticker("SDGR")
 
-dataframe = dinger.history(period='1y')
+dataframe = schrodinger.history(period='1y')
 DD = dataframe.to_csv()
 
 print(DD)
