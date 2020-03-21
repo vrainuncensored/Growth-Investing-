@@ -1,4 +1,5 @@
 import csv
+from trade import *
 
 def is_bullish_candlestick(candle):
     return candle['Close'] > candle['Open']
@@ -40,4 +41,9 @@ for company in snp500_compaines:
 
     if len(candles) > 1:
         if is_bullish_engulfing(candles,1):
-            print("{} - {} is bullish engulfing".format(ticker, candles[1]['Date']))
+            #print("{} - {} is bullish engulfing".format(ticker, candles[1]['Date']));
+            create_order("{}".format(ticker), 100, "sell", "market", "gtc" )
+
+        #if is_bearish_engulfing(candles,1):
+            #print("{} - {} is bearish engulfing".format(ticker, candles[1]['Date'])) \
+            #and create_order("{}".format(ticker), 100, "sell", "market", "gtc" )
