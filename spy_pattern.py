@@ -44,6 +44,6 @@ for company in snp500_compaines:
             #print("{} - {} is bullish engulfing".format(ticker, candles[1]['Date']));
             create_order("{}".format(ticker), 100, "sell", "market", "gtc" )
 
-        #if is_bearish_engulfing(candles,1):
-            #print("{} - {} is bearish engulfing".format(ticker, candles[1]['Date'])) \
-            #and create_order("{}".format(ticker), 100, "sell", "market", "gtc" )
+        if is_bearish_engulfing(candles,1):
+            #print("{} - {} is bearish engulfing".format(ticker, candles[1]['Date']))
+            create_order("{}".format(ticker), 100, "sell", "market", "gtc" )

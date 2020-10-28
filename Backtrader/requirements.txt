@@ -1,0 +1,19 @@
+matplotlib
+backtrader
+
+
+with open('data.csv') as S:
+    reader = csv.DictReader(data2)
+    print(reader)
+    candles = list(reader)
+    print(candles)
+#reader = csv.DictReader()
+csv_file = open('data.csv', 'w')
+csv_writer = csv.writer(csv_file)
+
+csv_writer.writerow(['open', 'high', 'low', 'close', 'volume'])
+
+for item in candles:
+    csv_writer.writerow([item['Open'], item['High'],item['Low'], item['Close'], item['Volume']])
+
+csv_file.close()
